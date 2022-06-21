@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color:#111;
+}
+.game, .historique {
+    border: 2px solid rgb(78, 78, 147);
+    padding: 50px;
+    border-radius: 25px;
+    background-color: rgba(198, 230, 255, 0.343)
+}
+.historique p {
+    font-size: 30px;
+    line-height: 50px;
+}
+#number {
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 1px dotted #111;
+}
+#responce {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    font-size: 50px;
+}
+.vie {
+    background-image: url(img/coeur.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+.anim_vie {
+    animation: vie 0.5s infinite linear;
+}
+@keyframes vie {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+.plus, .moins, .bravo {
+    background-image: url(img/signe_plus.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+.moins {
+    background-image: url(img/signe_moins.png);
+}
+.mini_plus, .mini_moins {
+    background-image: url(img/mini_plus.png);
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+}
+.mini_moins {
+    background-image: url(img/mini_moins.png);
+}
+.bravo {
+    color: transparent;
+    background-image: url(img/signe_valider.png);
+}
+.fail {
+    background-image: url(img/fail.png);
+    background-repeat: no-repeat;
+    width: 53px;
+    height: 50px;
+    color: transparent;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 99;
+}
+.popup p {
+    font-size: 50px;
+}
+.victoire span:nth-child(2) {
+    color: green
+}
+.defaite p {
+    font-size: 45px;
+}
+.defaite span:nth-child(2) {
+    color: red
+}
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.451);
+    z-index: 98;
+}
+/**************************************/
+/* BTN */
+.btn, .valider, .retour, .suppr, .rejouer, .coeur {
+    position: relative;
+    background-color: rgb(125, 199, 255);
+    padding: 16px;
+    border-radius: 5px;
+    margin: 15px;
+    width: 125px;
+    height: 60px;
+    font-size: 30px;
+    box-shadow: 0 8px rgb(71, 145, 201);
+    cursor: pointer;
+}
+.btn:hover, .rejouer:hover {
+    background-color: rgb(178, 222, 255);
+    box-shadow: 0 5px rgb(71, 145, 201);
+    top: 2px;
+}
+.btn:active, .rejouer:active {
+    box-shadow: 0 0px rgb(71, 145, 201);
+    top: 4px;
+}
+.valider {
+    background-color: rgb(109, 224, 109);
+    box-shadow: 0 8px rgb(57, 169, 57);
+}
+.valider:hover {
+    background-color: rgb(179, 246, 179);
+    box-shadow: 0 5px rgb(57, 169, 57);
+    top: 2px;
+}
+.valider:active {
+    box-shadow: 0 0px rgb(57, 169, 57);
+    top: 4px;
+}
+.retour{
+    background-color: rgb(172, 172, 172);
+    box-shadow: 0 8px rgb(104, 104, 104);
+}
+.retour:hover {
+    background-color: rgb(209, 209, 209);
+    box-shadow: 0 5px rgb(104, 104, 104);
+    top: 2px;
+}
+.retour:active {
+    box-shadow: 0 0px rgb(57, 169, 57);
+    top: 4px;
+}
+.suppr{
+    background-color: rgb(227, 103, 103);
+    box-shadow: 0 8px rgb(180, 74, 74);
+}
+.suppr:hover {
+    background-color: rgb(253, 144, 144);
+    box-shadow: 0 5px rgb(180, 74, 74);
+    top: 2px;
+}
+.suppr:active {
+    box-shadow: 0 0px rgb(180, 74, 74);
+    top: 4px;
+}
+.coeur {
+    background-image: url(img/btn_coeur.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(234, 234, 77);
+    box-shadow: 0 8px rgb(180, 180, 51);
+}
+.coeur:hover {
+    background-color: rgb(233, 233, 130);
+    box-shadow: 0 5px rgb(180, 180, 51);
+    top: 2px;
+}
+.coeur:active {
+    box-shadow: 0 0px rgb(180, 180, 51);
+    top: 4px;
+}
+/***********************************/
+/* Mise en forme */
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex_column {
+    flex-direction: column;
+}
+.text_center {
+    text-align: center;
+}
+.align_center {
+    align-content: center;
+}
+.justify_center {
+    justify-content: center;
+}
+.justify_around {
+    justify-content: space-around;
+}
+.margin_auto {
+    margin: 0 auto;
+}
+.relative {
+    position: relative;
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+/**********************************/
+/* LARGE */
+.large_10 {
+    width: 10%;
+}
+.large_15 {
+    width: 15%;
+}
+.large_30 {
+    width: 30%;
+}
+.large_50 {
+    width: 50%;
+}
+.large_60 {
+    width: 60%;
+}
+.large_80 {
+    width: 80%;
+}
+.large_90 {
+    width: 90%;
+}
+.large_100 {
+    width: 100%;
+}
+/*************************************/
+/* MARGIN/PADDING */
+.margin_top_20 {
+    margin-top: 20px;
+}
+.margin_top_50 {
+    margin-top: 50px;
+}
+.margin_top_100 {
+    margin-top: 100px;
+}

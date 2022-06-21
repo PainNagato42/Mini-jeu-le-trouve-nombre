@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Le trouve nombre</title>
+</head>
+
+<body>
+    <main>
+        <h1>Le trouve nombre</h1>
+        <div class="container margin_top_100">
+            <div class="flex">
+                <div class="game large_80">
+                    <div class="vies flex">
+                        <div class="vie"></div>
+                        <div class="vie"></div>
+                        <div class="vie"></div>
+                        <div class="vie"></div>
+                        <div class="vie"></div>
+                        <div class="vie"></div>
+                    </div>
+                    <div class="flex justify_center relative">
+                        <p class="large_15" id="number"></p>
+                        <div class="valider flex align_center justify_center large_15">Valider</div>
+                        <span class="large_30" id="responce"></span>
+                    </div>
+                    <div class="flex margin_top_50 justify_center" id="liste_number1">
+                        <div class="large_20">
+                            <div data-number="1" class="btn flex align_center justify_center">1</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="2" class="btn flex align_center justify_center">2</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="3" class="btn flex align_center justify_center">3</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="4" class="btn flex align_center justify_center">4</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="5" class="btn flex align_center justify_center">5</div>
+                        </div>
+                    </div>
+                    <div class="flex justify_center" id="liste_number2">
+                        <div class="large_20">
+                            <div data-number="6" class="btn flex align_center justify_center">6</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="7" class="btn flex align_center justify_center">7</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="8" class="btn flex align_center justify_center">8</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="9" class="btn flex align_center justify_center">9</div>
+                        </div>
+                        <div class="large_20">
+                            <div data-number="0" class="btn flex align_center justify_center">0</div>
+                        </div>
+                    </div>
+                    <div class="flex justify_center">
+                        <div class="retour flex large_15 align_center justify_center">Retour</div>
+                        <div class="suppr flex large_15 align_center justify_center">Suppr.</div>
+                        <div class="coeur flex large_15 align_center justify_center none"></div>
+                    </div>
+                </div>
+                <div class="historique large_20">
+                    <p><u>Historique</u></p>
+                </div>
+            </div>
+        </div>
+        <div class="mask"></div>
+        <div class="popup victoire">
+            <p><span class="bravo">XD</span><span>BRAVO !</span> le nombre à trouver était <span id="resultV"></span>.
+            </p>
+            <div class="margin_top_50 flex justify_center"><a class="rejouer"
+                    href="http://127.0.0.1:5500/index.html">Rejouez</a></div>
+        </div>
+        <div class="popup defaite">
+            <p><span class="fail">XD</span><span>Dommage !</span> le nombre à trouver était <span id="resultD"></span>.
+            </p>
+            <div class="margin_top_50 flex justify_center"><a class="rejouer"
+                    href="http://127.0.0.1:5500/index.html">Rejouez</a></div>
+        </div>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
